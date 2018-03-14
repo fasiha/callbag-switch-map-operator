@@ -1,6 +1,6 @@
 {
   "name": "callbag-flat-map-operator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A pure-callbag-operator implementation of flat-map for callbags 👜",
   "main": "index.js",
   "scripts": {
