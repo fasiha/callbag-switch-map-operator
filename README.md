@@ -15,8 +15,23 @@ $ npm install --save callbag-flat-map-operator
 ```
 
 ## API and examples
-### `flatmap(mapper, flattener)`
-An example that shows how we can repeatedly use the outputs of `flatmap` in more `flatmaps` (this assumes you've run `npm install callbag-basics` already):
+
+```js
+const flatmap = require('callbag-flat-map-operator');
+```
+
+### `flatmap(mapper[, flattener = (a, b) => b])`
+I think it's much easier to see what this does with examples, but I'll try to formalize this: with an abuse of TypeScript notation, this can be notionally described as:
+```ts
+flatmap(mapper: A => Callbag<B>, flattener?: (A, B) => C)(source: Callbag<A>): Callbag<C>
+```
+That is, `flatmap` is a callbag operator (a higher-order function) that takes up to two functions:
+- a `mapper` maps each emission of a source callbag and converts it to a new callbag, and
+- a `flattener` that maps each pair of values from the original source callbag and the callbag spawned from it to a final value,
+
+and produces a new source callbag that emits the outputs of `flattener`. By default, `flattener = (a, b) => b`, that is, the returned callbag will just emit a flattened stream of all callbags created by the `mapper`, but by overriding this you can achieve all sorts of useful behavior.
+
+An example will hopefully be much more illuminating. This shows how we can repeatedly use the outputs of `flatmap` in more `flatmaps`, and shows a couple of uses for `flattener` (for this example, be sure to run `npm install callbag-basics`):
 ```js
 const flatmap = require('callbag-flat-map-operator');
 
