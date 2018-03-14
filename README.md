@@ -1,10 +1,6 @@
 # callbag-flat-map-operator
 
-Callbag operator implemeting `flatmap`, allowing you to specify
-1. a `mapper: a -> b` function to create a new callbag from each element emitted by the original source, and
-2. a `flattener: (a, b) -> c` function that combines each element of the original source and each element of the callbag spawned by that source,
-
-and collects the result in the resulting callbag.
+Callbag operator implemeting `flatmap`, allowing you to map each element of a source callbag to a new callbag, and optionally to custom-collapse each pair of original/new elements into a final source callbag.
 
 This library contains a single function that implements the example in [`callbag-flatten`](https://github.com/staltz/callbag-flatten)'s README showing the basic pattern of calling `map` inside `map`, and then `flatten`ing. That is, its [implementation](index.js), is a combination of existing callbag operators (namely, `pipe`, `map`, and `flatten`), so there is absolutely no magic here. (Compare this to the [`callbag-flat-map`](https://github.com/avinashcodes/callbag-flat-map) which implements this operator from scratch, and is not as readily inspectable.)
 
