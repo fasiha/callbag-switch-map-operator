@@ -1,0 +1,32 @@
+{
+  "name": "callbag-flat-map-operator",
+  "version": "1.0.0",
+  "description": "A pure-callbag-operator implementation of flat-map for callbags 👜",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape tests.js"
+  },
+  "keywords": [
+    "callbag",
+    "flatmap",
+    "flat-map"
+  ],
+  "author": "Ahmed Fasih",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fasiha/callbag-flat-map-operator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fasiha/callbag-flat-map-operator/issues"
+  },
+  "homepage": "https://github.com/fasiha/callbag-flat-map-operator#readme",
+  "license": "Unlicense",
+  "devDependencies": {
+    "callbag-basics": "^2.0.1",
+    "tape": "^4.9.0"
+  },
+  "dependencies": {
+    "callbag-flatten": "^1.0.0",
+    "callbag-map": "^1.0.1"
+  }
+}
