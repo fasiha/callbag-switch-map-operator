@@ -26,7 +26,7 @@ const years = [ 2017, 2016 ];
 const urls = 'users,edits'.split(',');
 const langs = 'en,zh'.split(',');
 
-// This is the Cartesian product of {years, urls, langs}, so 3 * 2 * 3 elements will be emitted
+// This is the Cartesian product of {years, urls, langs}, so 2 * 2 * 2 elements will be emitted
 const parametersCallbag = pipe(
     fromIter(urls),
     flatmap(
