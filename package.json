@@ -1,7 +1,7 @@
 {
-  "name": "callbag-flat-map-operator",
-  "version": "1.0.2",
-  "description": "A pure-callbag-operator implementation of flat-map for callbags 👜",
+  "name": "callbag-switch-map-operator",
+  "version": "2.0.0",
+  "description": "A pure-callbag-operator implementation of switch-map (not exactly flat-map) for callbags 👜",
   "main": "index.js",
   "scripts": {
     "test": "tape tests.js"
@@ -9,17 +9,19 @@
   "keywords": [
     "callbag",
     "flatmap",
-    "flat-map"
+    "flat-map",
+    "switch-map",
+    "switchmap"
   ],
   "author": "Ahmed Fasih",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fasiha/callbag-flat-map-operator.git"
+    "url": "git+https://github.com/fasiha/callbag-switch-map-operator.git"
   },
   "bugs": {
-    "url": "https://github.com/fasiha/callbag-flat-map-operator/issues"
+    "url": "https://github.com/fasiha/callbag-switch-map-operator/issues"
   },
-  "homepage": "https://github.com/fasiha/callbag-flat-map-operator#readme",
+  "homepage": "https://github.com/fasiha/callbag-switch-map-operator#readme",
   "license": "Unlicense",
   "devDependencies": {
     "callbag-basics": "^2.0.1",
